@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鏡緣</title>
+<!-- CSS list -->
+<LINK href="main.css" rel="stylesheet" type="text/css">
+<!-- script list -->
+<script src='main.js'></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div id="form">
+	<div id="size" class="item">
+		<h2>大小</h2>
+		<span class="title">寬</span>
+		<input id="width" class="numberfield" type="text" value="600" onchange="javascript: repaint(this);" />
+		<span class="title">高</span>
+		<input id="height" class="numberfield" type="text" value="400" onchange="javascript: repaint(this);" />
+	</div>
+	<div id="image" class="item">
+		<h2>圖片</h2>
+		<span class="title">URL</span>
+		<input id="img_url" class="textfield" type="text" value="https://lh3.googleusercontent.com/Xg9cgHSXQSYGtDy7mmZ6hJwNGM1TmH0W0A1_NBAkcEI9O6FxE-e8ALfonr4P_PMse7PNY8kIOxQZcE0=w1920-h901" onchange="javascript: repaint(this);" />
+	</div>
+	<div id="border" class="item">
+		<h2>邊框</h2>
+		<br>
+			<span class="title">邊框大小</span>
+			<input id="border_width" class="numberfield" type="text" value="16" onchange="javascript: repaint(this);" />
+			<span class="title">吃圖大小</span>
+			<input id="eat_width" class="numberfield" type="text" value="2" onchange="javascript: repaint(this);" />
+		</br>
+		<br>
+			<span class="title">外緣顏色</span>
+			<input id="outer_color" class="textfield" type="text" value="#994040" onchange="javascript: repaint(this);" />
+			<span class="title">內緣顏色</span>
+			<input id="inner_color" class="textfield" type="text" value="#C0C0C0" onchange="javascript: repaint(this);" />
+		</br>
+	</div>
+</div>
+<script>repaint();</script>
+</body>
+</html>
