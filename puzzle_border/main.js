@@ -19,6 +19,16 @@ function repaint(source)
 	draw_border();
 }
 
+function adjust_aspect()
+{
+	var wo = document.getElementById("width");
+	var ho = document.getElementById("height");
+	var iw = img.width;
+	var ih = img.height;
+	wo.value = Math.floor(Number(ho.value) * iw / ih);
+	repaint();
+}
+
 function refresh_attributes()
 {
 	canvas = document.getElementById("canvas");
